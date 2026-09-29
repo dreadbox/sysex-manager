@@ -2,6 +2,7 @@ import { z } from 'zod'
 function getEnumValues<T extends z.ZodEnum>(enumSchema: T): string[] {
   return Object.values(enumSchema.enum);
 }
+
 const Norm = z.number().min(0).max(1);
 console.log(Norm)
 console.log(Norm._def.checks)
