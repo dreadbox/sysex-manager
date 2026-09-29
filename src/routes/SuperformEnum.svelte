@@ -11,7 +11,7 @@
   // This wrapper is mandatory for zod
 	const enumWrapper = z.object({ enumValue: enumZodSchema });
 
-	const { form, validate } = superForm(
+	const { form } = superForm(
 		{ enumValue: currentValue },
 		{ validators: zod4(enumWrapper) }
 	);
